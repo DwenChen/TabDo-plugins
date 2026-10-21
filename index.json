@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "plugins": [{
+    "name": "hello-tabdo",
+    "title": "会话示例",
+    "description": "展示 TabDo 会话清理与必要任务的开发示例。",
+    "version": "1.0.0",
+    "lifecycle": "session-v1",
+    "platform": ["win32"],
+    "author": "DwenChen",
+    "sourceType": "open_source",
+    "homepage": "https://github.com/DwenChen/TabDo-plugins/tree/main/plugins/hello-tabdo",
+    "logo": "https://raw.githubusercontent.com/DwenChen/TabDo-plugins/main/plugins/hello-tabdo/logo.png",
+    "downloadUrl": "https://github.com/DwenChen/TabDo-plugins/releases/download/v1.0.0/hello-tabdo-1.0.0.zpx",
+    "readme": "# 会话示例\n\n展示 TabDo session-v1 生命周期：可见时的计时器在退出时释放；点击保存后，完整写入链由有限任务登记。重新打开仅恢复保存的文本，不恢复旧页面或计时器。源码位于 TabDo-plugins/plugins/hello-tabdo。"
+  }]
+}

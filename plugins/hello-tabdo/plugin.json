@@ -1,0 +1,11 @@
+{
+  "name": "hello-tabdo",
+  "title": "会话示例",
+  "description": "TabDo 插件生命周期开发示例",
+  "version": "1.0.0",
+  "author": "DwenChen",
+  "main": "index.html",
+  "logo": "logo.png",
+  "lifecycle": "session-v1",
+  "features": [{ "code": "hello", "cmds": ["会话示例"] }]
+}
