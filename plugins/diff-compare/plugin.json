@@ -1,0 +1,48 @@
+{
+  "name": "diff-compare",
+  "title": "差异比较",
+  "description": "本地离线差异比较工具，支持文本、图片、文件夹、Word、Excel、PDF 与 PPT 差异对比及报告导出。",
+  "version": "1.0.0",
+  "author": "DwenChen",
+  "main": "index.html",
+  "preload": "preload.cjs",
+  "logo": "logo.png",
+  "lifecycle": "session-v1",
+  "platform": ["win32", "darwin", "linux"],
+  "window": {
+    "position": "cursor",
+    "resizable": true,
+    "width": 1120,
+    "height": 720
+  },
+  "features": [
+    {
+      "code": "diff",
+      "explain": "文本、图片、文件夹及常见文档的本地差异比较",
+      "icon": "logo.png",
+      "cmds": [
+        "差异比较",
+        {
+          "type": "files",
+          "label": "差异比较",
+          "fileType": "file",
+          "match": "/\\.(?:txt|md|markdown|json|jsonc|js|mjs|cjs|ts|tsx|jsx|vue|svelte|html|htm|css|scss|less|xml|svg|yaml|yml|toml|ini|cfg|conf|env|log|sh|bash|zsh|ps1|bat|cmd|py|java|kt|go|rs|c|h|cpp|hpp|cs|php|rb|sql|swift|dart|lua|bmp|gif|jpeg|jpg|jpe|png|webp|ico|avif|docx|xlsx|csv|tsv|pdf|pptx)$/i",
+          "minLength": 1,
+          "maxLength": 2
+        },
+        {
+          "type": "files",
+          "label": "差异比较",
+          "fileType": "directory",
+          "match": "/.*/",
+          "minLength": 1,
+          "maxLength": 2
+        },
+        {
+          "type": "img",
+          "label": "差异比较"
+        }
+      ]
+    }
+  ]
+}

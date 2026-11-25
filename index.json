@@ -1,17 +1,33 @@
 {
   "schemaVersion": 1,
-  "plugins": [{
-    "name": "hello-tabdo",
-    "title": "会话示例",
-    "description": "展示 TabDo 会话清理与必要任务的开发示例。",
-    "version": "1.0.0",
-    "lifecycle": "session-v1",
-    "platform": ["win32"],
-    "author": "DwenChen",
-    "sourceType": "open_source",
-    "homepage": "https://github.com/DwenChen/TabDo-plugins/tree/main/plugins/hello-tabdo",
-    "logo": "https://raw.githubusercontent.com/DwenChen/TabDo-plugins/main/plugins/hello-tabdo/logo.png",
-    "downloadUrl": "https://github.com/DwenChen/TabDo-plugins/releases/download/v1.0.0/hello-tabdo-1.0.0.zpx",
-    "readme": "# 会话示例\n\n展示 TabDo session-v1 生命周期：可见时的计时器在退出时释放；点击保存后，完整写入链由有限任务登记。重新打开仅恢复保存的文本，不恢复旧页面或计时器。源码位于 TabDo-plugins/plugins/hello-tabdo。"
-  }]
+  "plugins": [
+    {
+      "name": "hello-tabdo",
+      "title": "会话示例",
+      "description": "展示 TabDo 会话清理与必要任务的开发示例。",
+      "version": "1.0.0",
+      "lifecycle": "session-v1",
+      "platform": ["win32"],
+      "author": "DwenChen",
+      "sourceType": "open_source",
+      "homepage": "https://github.com/DwenChen/TabDo-plugins/tree/main/plugins/hello-tabdo",
+      "logo": "https://raw.githubusercontent.com/DwenChen/TabDo-plugins/main/plugins/hello-tabdo/logo.png",
+      "downloadUrl": "https://github.com/DwenChen/TabDo-plugins/releases/download/v1.0.0/hello-tabdo-1.0.0.zpx",
+      "readme": "# 会话示例\n\n展示 TabDo session-v1 生命周期：可见时的计时器在退出时释放；点击保存后，完整写入链由有限任务登记。重新打开仅恢复保存的文本，不恢复旧页面或计时器。源码位于 TabDo-plugins/plugins/hello-tabdo。"
+    },
+    {
+      "name": "diff-compare",
+      "title": "差异比较",
+      "description": "本地离线差异比较工具，支持文本、图片、文件夹、Word、Excel、PDF 与 PPT 差异对比及报告导出。",
+      "version": "1.0.0",
+      "lifecycle": "session-v1",
+      "platform": ["win32", "darwin", "linux"],
+      "author": "DwenChen",
+      "sourceType": "open_source",
+      "homepage": "https://github.com/DwenChen/TabDo-plugins/tree/main/plugins/diff-compare",
+      "logo": "https://raw.githubusercontent.com/DwenChen/TabDo-plugins/main/plugins/diff-compare/logo.png",
+      "downloadUrl": "https://github.com/DwenChen/TabDo-plugins/releases/download/v1.1.0/diff-compare-1.0.0.zpx",
+      "readme": "# 差异比较\n\n基于 TabDo session-v1 协议实现的本地离线差异比较插件，所有解析、比对与报告生成均在本机完成。\n\n## 功能特性\n- 文本对比：双栏并排/统一高亮、字符级内联差异、仅差异折叠、忽略空白/大小写、历史记录与 HTML 报告导出。\n- 图片对比：滑动、淡化、左右与像素差异高亮四种模式，支持缩放拖拽、截图粘贴与 PNG 另存。\n- 文件夹对比：白名单安全递归扫描、SHA-256 与规范化内容指纹校验、内联文件差异预览及 HTML/CSV 报告导出。\n- 文档对比：原生离线解析 Word (.docx)、Excel (.xlsx/.csv/.tsv)、PDF (.pdf) 与 PPT (.pptx)。\n\n## 生命周期与持久化\n退出会话自动中止扫描/计算并释放监听、对象 URL 与画布缓冲；历史保存与报告导出通过有限必要任务完成，私有 dbStorage 历史在退出后完整保留。源码位于 TabDo-plugins/plugins/diff-compare。"
+    }
+  ]
 }

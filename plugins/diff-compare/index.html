@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>差异比较</title>
+  <link rel="icon" type="image/png" href="./logo.png" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <header class="top-nav" role="banner">
+      <nav class="mode-tabs" role="tablist" aria-label="对比模式">
+        <button class="mode-tab active" role="tab" aria-selected="true" data-mode="text">文本</button>
+        <button class="mode-tab" role="tab" aria-selected="false" data-mode="image">图片</button>
+        <button class="mode-tab" role="tab" aria-selected="false" data-mode="folder">文件夹</button>
+        <button class="mode-tab" role="tab" aria-selected="false" data-mode="docx">Word</button>
+        <button class="mode-tab" role="tab" aria-selected="false" data-mode="excel">Excel</button>
+        <button class="mode-tab" role="tab" aria-selected="false" data-mode="pdf">PDF</button>
+        <button class="mode-tab" role="tab" aria-selected="false" data-mode="pptx">PPT</button>
+      </nav>
+      <div class="nav-meta">
+        <span class="nav-badge" title="全部解析与比对均在本机离线完成">本地离线</span>
+      </div>
+    </header>
+
+    <main id="workspace" class="workspace" role="main">
+      <section id="view-text" class="view-panel active" data-view="text"></section>
+      <section id="view-image" class="view-panel" data-view="image"></section>
+      <section id="view-folder" class="view-panel" data-view="folder"></section>
+      <section id="view-docx" class="view-panel" data-view="docx"></section>
+      <section id="view-excel" class="view-panel" data-view="excel"></section>
+      <section id="view-pdf" class="view-panel" data-view="pdf"></section>
+      <section id="view-pptx" class="view-panel" data-view="pptx"></section>
+    </main>
+
+    <!-- 覆盖对话框：替换左/右侧文件确认（使用不透明主题底色） -->
+    <div id="replace-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="replace-title">
+      <div class="modal-card">
+        <h2 id="replace-title" class="modal-title">更换文件</h2>
+        <p id="replace-desc" class="modal-desc">检测到单个文件，请选择要替换哪一侧内容。</p>
+        <div class="modal-actions">
+          <button type="button" class="btn" data-replace="left">更换左侧</button>
+          <button type="button" class="btn" data-replace="right">更换右侧</button>
+          <button type="button" class="btn btn-ghost" data-replace="cancel">取消</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="toast-host" class="toast-host" role="status" aria-live="polite"></div>
+  </div>
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>
